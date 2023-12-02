@@ -10,6 +10,7 @@ import sri.daos.transacciones.TecnicoTGDAOImplement;
 import sri.entidades.Especialidad;
 import sri.entidades.Incidente;
 import sri.entidades.Tecnico;
+import sri.entidades.enumerados.NombreEspecialidad;
 
 /**
  *
@@ -55,7 +56,61 @@ public class TecnicoRImplement implements RepositorioGenerico<Tecnico, Integer>{
         return tecTransaccionGDAOI.readIncidentes(idTecnico);
     }
     
-    public Tecnico getTecnicoConMasIncidentesResueltosEnNdias(int nDias){
-        return tecTransaccionGDAOI.readTecnicoConMasIncidentesResueltEnNDias(nDias);
+    public Tecnico getTecnicoConMasIncidentes(){
+        return tecTransaccionGDAOI.readTecnicoConMásIncidentes();
+    } 
+    
+    public List<Tecnico> getTecnicosConMasIncidentes(){
+        return tecTransaccionGDAOI.readTecnicosConMásIncidentes();
+    }
+    
+    public List<Tecnico> getTecnicosConMasIncidentesResueltos(){
+        return tecTransaccionGDAOI.readTecnicosConMásIncidentesResueltos();
+    } 
+
+    public List<Tecnico> getTecnicosConMasIncidentesResueltosEnlosUltimosNDias(int nDias){
+        return tecTransaccionGDAOI.readTecnicosConMásIncidentesResueltosEnLosUltimosNDias(nDias);
+    }
+    
+    public List<Tecnico> getTecnicosDeUnaDeterminadaEspecialidadConMasIncidentesResueltosEnlosUltimosNDias(
+            NombreEspecialidad nombreEspecialidad, int nDias){
+        return tecTransaccionGDAOI.readTecnicosDeUnaDeterminadaEspecialidadConMásIncidentesResueltosEnLosUltimosNDias(
+                nombreEspecialidad, nDias);
+    } 
+    
+    public List<Incidente> getIncidentesResueltosMasRapido(){
+        return tecTransaccionGDAOI.readIncidentesResueltosMasRapido();
+    }
+    
+    public List<Tecnico> getTecnicosDeIncidentesResueltosMasRapido(){
+        return tecTransaccionGDAOI.readTecnicosDeIncidentesResueltosMasRapido();
+    }
+    
+    public List<Tecnico> getTecnicosDeIncidentesResueltosMasRapidoEnLosUltimosNDias(int nDias){
+        return tecTransaccionGDAOI.readTecnicosDeIncidentesResueltosMasRapidoEnLosUltimosNDias(nDias);
+    }
+    
+    public List<Tecnico> getTecnicosDeIncidentesResueltosMasRapidoEnLosUltimosNDiasV2(int nDias){
+        return tecTransaccionGDAOI.readTecnicosDeIncidentesResueltosMasRapidoEnLosUltimosNDiasV2(nDias);
+    }
+    
+    public List<Tecnico> getTecnicosDeUnaDeterminadaEspecialidadConIncidentesResueltosMasRapidoEnLosUltimosNDias(
+            NombreEspecialidad nombreEspecialidad, int nDias){
+        return tecTransaccionGDAOI.readTecnicosDeUnaDeterminadaEspecialidadConIncidentesResueltosMasRapidoEnLosUltimosNDias(
+                nombreEspecialidad, nDias);
+    }
+    
+    public List<Tecnico> getTecnicosConPromedioDeIncidentesResueltosMasRapido(){
+        return tecTransaccionGDAOI.readTecnicosConPromedioDeIncidentesResueltosMasRapido();
+    }
+    
+    public List<Tecnico> getTecnicosConPromedioDeIncidentesResueltosMasRapidoEnLosUltimosNDias(int nDias){
+        return tecTransaccionGDAOI.readTecnicosConPromedioDeIncidentesResueltosMasRapidoEnLosUltimosNDias(nDias);
+    }
+
+    public List<Tecnico> getTecnicosDeUnaDeterminadaEspecialidadConPromedioDeIncidentesResueltosMasRapidoEnLosUltimosNDias(
+            NombreEspecialidad nombreEspecialidad, int nDias){
+        return tecTransaccionGDAOI.readTecnicosDeUnaDeterminadaEspecialidadConPromedioDeIncidentesResueltosMasRapidoEnLosUltimosNDias(
+                nombreEspecialidad, nDias);
     }
 }

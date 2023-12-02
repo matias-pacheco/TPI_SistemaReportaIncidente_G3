@@ -13,6 +13,7 @@ import sri.daos.factories.ConsultaGDAOFactory;
 import sri.daos.consultas.TecnicoCGDAOImplement;
 import sri.entidades.Especialidad;
 import sri.entidades.Incidente;
+import sri.entidades.enumerados.NombreEspecialidad;
 
 /**
  *
@@ -103,12 +104,126 @@ public class TecnicoTGDAOImplement implements TransaccionGenericaDAO<Tecnico, In
         return registro;
     }
     
-    public Tecnico readTecnicoConMasIncidentesResueltEnNDias(int nDias){
+    public Tecnico readTecnicoConMásIncidentes(){
         EntityManager em = obtenerEntityManagerConfigurado();
         em.getTransaction().begin();
-        Tecnico tecnico = tecConsultaGDAOI.readTecnicoConMasIncidentesResueltoEnNDias(nDias);
+        Tecnico tecnico = tecConsultaGDAOI.readTecnicoConMasIncidentes();
         em.getTransaction().commit();
         em.close();
         return tecnico;
+    }
+    
+    public List<Tecnico> readTecnicosConMásIncidentes(){
+        EntityManager em = obtenerEntityManagerConfigurado();
+        em.getTransaction().begin();
+        List<Tecnico> registro = tecConsultaGDAOI.readTecnicosConMasIncidentes();
+        em.getTransaction().commit();
+        em.close();
+        return registro;
+    }
+    
+    public List<Tecnico> readTecnicosConMásIncidentesResueltos(){
+        EntityManager em = obtenerEntityManagerConfigurado();
+        em.getTransaction().begin();
+        List<Tecnico> registro = tecConsultaGDAOI.readTecnicosConMasIncidentesResueltos();
+        em.getTransaction().commit();
+        em.close();
+        return registro;
+    }
+    
+    public List<Tecnico> readTecnicosConMásIncidentesResueltosEnLosUltimosNDias(int nDias){
+        EntityManager em = obtenerEntityManagerConfigurado();
+        em.getTransaction().begin();
+        List<Tecnico> registro = tecConsultaGDAOI.readTecnicosConMasIncidentesResueltosEnLosUltimosNDias(nDias);
+        em.getTransaction().commit();
+        em.close();
+        return registro;
+    }
+    
+    public List<Tecnico> readTecnicosDeUnaDeterminadaEspecialidadConMásIncidentesResueltosEnLosUltimosNDias(
+            NombreEspecialidad nombreEspecialidad, int nDias){
+        EntityManager em = obtenerEntityManagerConfigurado();
+        em.getTransaction().begin();
+        List<Tecnico> registro = tecConsultaGDAOI.readTecnicosDeUnaDeterminadaEspecialidadConMasIncidentesResueltosEnLosUltimosNDias(
+                nombreEspecialidad, nDias);
+        em.getTransaction().commit();
+        em.close();
+        return registro;
+    }
+    
+    public List<Incidente> readIncidentesResueltosMasRapido(){
+        EntityManager em = obtenerEntityManagerConfigurado();
+        em.getTransaction().begin();
+        List<Incidente> registro = tecConsultaGDAOI.readIncidentesResueltosMasRapido();
+        em.getTransaction().commit();
+        em.close();
+        return registro;
+    }
+    
+    public List<Tecnico> readTecnicosDeIncidentesResueltosMasRapido(){
+        EntityManager em = obtenerEntityManagerConfigurado();
+        em.getTransaction().begin();
+        List<Tecnico> registro = tecConsultaGDAOI.readTecnicosDeIncidentesResueltosMasRapido();
+        em.getTransaction().commit();
+        em.close();
+        return registro;
+    }
+    
+    public List<Tecnico> readTecnicosDeIncidentesResueltosMasRapidoEnLosUltimosNDias(int nDias){
+        EntityManager em = obtenerEntityManagerConfigurado();
+        em.getTransaction().begin();
+        List<Tecnico> registro = tecConsultaGDAOI.readTecnicosDeIncidentesResueltosMasRapidoEnLosUltimosNDias(nDias);
+        em.getTransaction().commit();
+        em.close();
+        return registro;
+    }
+    
+    public List<Tecnico> readTecnicosDeIncidentesResueltosMasRapidoEnLosUltimosNDiasV2(int nDias){
+        EntityManager em = obtenerEntityManagerConfigurado();
+        em.getTransaction().begin();
+        List<Tecnico> registro = tecConsultaGDAOI.readTecnicosDeIncidentesResueltosMasRapidoEnLosUltimosNDiasV2(nDias);
+        em.getTransaction().commit();
+        em.close();
+        return registro;
+    }
+    
+    public List<Tecnico> readTecnicosDeUnaDeterminadaEspecialidadConIncidentesResueltosMasRapidoEnLosUltimosNDias(
+            NombreEspecialidad nombreEspecialidad, int nDias){
+        EntityManager em = obtenerEntityManagerConfigurado();
+        em.getTransaction().begin();
+        List<Tecnico> registro = tecConsultaGDAOI.readTecnicosDeUnaDeterminadaEspecialidadConIncidentesResueltosMasRapidoEnLosUltimosNDias(
+                nombreEspecialidad, nDias);
+        em.getTransaction().commit();
+        em.close();
+        return registro;
+    }
+    
+    public List<Tecnico> readTecnicosConPromedioDeIncidentesResueltosMasRapido(){
+        EntityManager em = obtenerEntityManagerConfigurado();
+        em.getTransaction().begin();
+        List<Tecnico> registro = tecConsultaGDAOI.readTecnicosConPromedioDeIncidentesResueltosMasRapido();
+        em.getTransaction().commit();
+        em.close();
+        return registro;
+    }
+    
+    public List<Tecnico> readTecnicosConPromedioDeIncidentesResueltosMasRapidoEnLosUltimosNDias(int nDias){
+        EntityManager em = obtenerEntityManagerConfigurado();
+        em.getTransaction().begin();
+        List<Tecnico> registro = tecConsultaGDAOI.readTecnicosConPromedioDeIncidentesResueltosMasRapidoEnLosUltimosNDias(nDias);
+        em.getTransaction().commit();
+        em.close();
+        return registro;
+    }
+    
+    public List<Tecnico> readTecnicosDeUnaDeterminadaEspecialidadConPromedioDeIncidentesResueltosMasRapidoEnLosUltimosNDias(
+            NombreEspecialidad nombreEspecialidad, int nDias){
+        EntityManager em = obtenerEntityManagerConfigurado();
+        em.getTransaction().begin();
+        List<Tecnico> registro = tecConsultaGDAOI.readTecnicosDeUnaDeterminadaEspecialidadConPromedioDeIncidentesResueltosMasRapidoEnLosUltimosNDias(
+                nombreEspecialidad, nDias);
+        em.getTransaction().commit();
+        em.close();
+        return registro;
     }
 }

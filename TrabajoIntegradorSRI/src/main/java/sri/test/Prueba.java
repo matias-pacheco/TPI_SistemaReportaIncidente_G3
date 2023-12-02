@@ -156,9 +156,27 @@ public class Prueba {
 //        
 //        especialidadRI.update(esp3R1);
 
+//-------------------------- C O N S U L T A S   E S P E C I A L I Z A D A S --------------------------
 //-------------------------------- R E A D (consultas especializadas)----------------------------------
-        System.out.println(tecnicoRI.getTecnicoConMasIncidentesResueltosEnNdias(10));
+//        System.out.println(tecnicoRI.getTecnicoConMasIncidentesResueltosEnLosUltimosNdias(16));
 
+//----- funcionan ------
+//        System.out.println(tecnicoRI.getTecnicoConMasIncidentes());
+//        System.out.println(tecnicoRI.getTecnicosConMasIncidentes());
+//        System.out.println(tecnicoRI.getTecnicosConMasIncidentesResueltos());
+//        System.out.println(tecnicoRI.getTecnicosConMasIncidentesResueltosEnlosUltimosNDias(31));
+//        System.out.println(tecnicoRI.getTecnicosDeUnaDeterminadaEspecialidadConMasIncidentesResueltosEnlosUltimosNDias(
+//                NombreEspecialidad.TANGO, 17));
+//        System.out.println(tecnicoRI.getIncidentesResueltosMasRapido());
+//        System.out.println(tecnicoRI.getTecnicosDeIncidentesResueltosMasRapido());
+//        System.out.println(tecnicoRI.getTecnicosDeIncidentesResueltosMasRapidoEnLosUltimosNDias(200));
+//        System.out.println(tecnicoRI.getTecnicosDeIncidentesResueltosMasRapidoEnLosUltimosNDiasV2(10));
+        System.out.println(tecnicoRI.getTecnicosDeUnaDeterminadaEspecialidadConIncidentesResueltosMasRapidoEnLosUltimosNDias(
+                NombreEspecialidad.SIP, 200));
+//        System.out.println(tecnicoRI.getTecnicosConPromedioDeIncidentesResueltosMasRapido());
+//        System.out.println(tecnicoRI.getTecnicosConPromedioDeIncidentesResueltosMasRapidoEnLosUltimosNDias(17));
+//        System.out.println(tecnicoRI.getTecnicosDeUnaDeterminadaEspecialidadConPromedioDeIncidentesResueltosMasRapidoEnLosUltimosNDias(
+//                NombreEspecialidad.SAP, 18));
 
 //-----------------------------------------------------------------------------------------------------
 //------------------------------ P R U E B A S   C R U D   P R O B L E M A ----------------------------
@@ -303,6 +321,42 @@ public class Prueba {
 //        
 //        incidenteRI.add(inc3);
 
+//        Incidente inc4 = Incidente.builder()
+//                .ingreso(LocalDate.of(2023, Month.NOVEMBER, 01))
+//                .problema(problemaRI.get(3))
+//                .descripcionProblema("Me gustaria saber por que bla bla bla bla bla")
+//                .estado(IncidenteEstado.ABIERTO)
+//                .build();
+//        
+//        incidenteRI.add(inc4);
+//        
+//        Incidente inc5 = Incidente.builder()
+//                .ingreso(LocalDate.of(2023, Month.NOVEMBER, 7))
+//                .problema(problemaRI.get(2))
+//                .descripcionProblema("Me gustaria saber por que bla bla bla bla bla")
+//                .estado(IncidenteEstado.ABIERTO)
+//                .build();
+//        
+//        incidenteRI.add(inc5);
+//        
+//        Incidente inc6 = Incidente.builder()
+//                .ingreso(LocalDate.of(2023, Month.NOVEMBER, 10))
+//                .problema(problemaRI.get(1))
+//                .descripcionProblema("Me gustaria saber por que bla bla bla bla bla")
+//                .estado(IncidenteEstado.ABIERTO)
+//                .build();
+//        
+//        incidenteRI.add(inc6);
+
+//        Incidente inc7 = Incidente.builder()
+//                .ingreso(LocalDate.of(2023, Month.NOVEMBER, 01))
+//                .problema(problemaRI.get(3))
+//                .descripcionProblema("Me gustaria saber por que bla bla bla bla bla")
+//                .estado(IncidenteEstado.ABIERTO)
+//                .build();
+//        
+//        incidenteRI.add(inc7);
+
 //---------------------------------------------- R E A D ---------------------------------------------
 //        Incidente inc1R = incidenteRI.get(1);
 //        System.out.println(inc1R);
@@ -312,6 +366,18 @@ public class Prueba {
 //
 //        Incidente inc3R = incidenteRI.get(3);
 //        System.out.println(inc3R);
+
+//        Incidente inc4R = incidenteRI.get(52);
+//        System.out.println(inc4R);
+//        
+//        Incidente inc5R = incidenteRI.get(53);
+//        System.out.println(inc5R);
+//        
+//        Incidente inc6R = incidenteRI.get(54);
+//        System.out.println(inc6R);
+
+//        Incidente inc7R = incidenteRI.get(102);
+//        System.out.println(inc7R);
         
 //---------------------------------------------- U P D A T E ---------------------------------------------
 //        inc1R.setTecnico(tecnicoRI.get(1));
@@ -340,6 +406,44 @@ public class Prueba {
 //        inc3R.setEstado(IncidenteEstado.RESUELTO);
 //        
 //        incidenteRI.update(inc3R);
+
+
+//        inc4R.setTecnico(tecnicoRI.get(1));
+//        inc4R.setTiempoEstimado(LocalDate.of(2023, Month.NOVEMBER, 10));
+//        inc4R.setIndicacionesTecnicas("Tenes que...");
+//        inc4R.setDificultadTecnica(DificultadTecnica.COMPLEJO);
+//        inc4R.setTiempoMaximo(LocalDate.of(2023, Month.NOVEMBER, 13));
+//        inc4R.setResolucion(LocalDate.of(2023, Month.NOVEMBER, 12));
+//        inc4R.setEstado(IncidenteEstado.RESUELTO);
+//        
+//        incidenteRI.update(inc4R);
+//
+//        inc5R.setTecnico(tecnicoRI.get(2));
+//        inc5R.setTiempoEstimado(LocalDate.of(2023, Month.NOVEMBER, 10));
+//        inc5R.setIndicacionesTecnicas("Primero ...");
+//        inc5R.setDificultadTecnica(DificultadTecnica.INTERMEDIO);
+//        inc5R.setResolucion(LocalDate.of(2023, Month.NOVEMBER, 10));
+//        inc5R.setEstado(IncidenteEstado.RESUELTO);
+//        
+//        incidenteRI.update(inc5R);
+//
+//        inc6R.setTecnico(tecnicoRI.get(1));
+//        inc6R.setTiempoEstimado(LocalDate.of(2023, Month.NOVEMBER, 14));
+//        inc6R.setIndicacionesTecnicas("Lo que tenes que hacer es...");
+//        inc6R.setDificultadTecnica(DificultadTecnica.INTERMEDIO);
+//        inc6R.setResolucion(LocalDate.of(2023, Month.NOVEMBER, 14));
+//        inc6R.setEstado(IncidenteEstado.RESUELTO);
+//        
+//        incidenteRI.update(inc6R);
+
+//        inc7R.setTecnico(tecnicoRI.get(2));
+//        inc7R.setTiempoEstimado(LocalDate.of(2023, Month.NOVEMBER, 11));
+//        inc7R.setIndicacionesTecnicas("Lo que tenes que hacer es...");
+//        inc7R.setDificultadTecnica(DificultadTecnica.COMPLEJO);
+//        inc7R.setTiempoMaximo(LocalDate.of(2023, Month.NOVEMBER, 14));
+//        inc7R.setEstado(IncidenteEstado.ASIGNADO);
+//        
+//        incidenteRI.update(inc7R);
 
 //-----------------------------------------------------------------------------------------------------
 //----------- P R U E B A S   C R U D   C L I E N T E _ S E R V I C I O _ I N C I D E N T E -----------

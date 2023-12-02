@@ -15,6 +15,8 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 import java.time.LocalDate;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -46,6 +48,7 @@ public class Incidente {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @Column(nullable = false)
+//    @Temporal(TemporalType.DATE)
     private LocalDate ingreso;
     @ManyToOne
     @JoinColumn(name = "problema_id", referencedColumnName = "id", nullable = false)
@@ -55,13 +58,16 @@ public class Incidente {
     @ManyToOne
     @JoinColumn(name = "tecnico_id", referencedColumnName = "id")
     private Tecnico tecnico; //en la primera instancia podría ser NULL
+//    @Temporal(TemporalType.DATE)
     private LocalDate tiempoEstimado; //en la primera instancia podría ser NULL
     @Column(length = 100)
     private String indicacionesTecnicas; //en la primera instancia podría ser NULL
     @Enumerated(EnumType.STRING)
     @Column(length = 45)
     private DificultadTecnica dificultadTecnica; //en la primera instancia podría ser NULL
+//    @Temporal(TemporalType.DATE)
     private LocalDate tiempoMaximo; //en la primera instancia podría ser NULL
+//    @Temporal(TemporalType.DATE)
     private LocalDate resolucion; //en la primera instancia podría ser NULL
     @Enumerated(EnumType.STRING)
     @Column(length = 45, nullable = false)
