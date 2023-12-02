@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-11-2023 a las 03:47:11
+-- Tiempo de generación: 02-12-2023 a las 05:21:22
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -187,7 +187,14 @@ CREATE TABLE `incidente` (
 INSERT INTO `incidente` (`id`, `ingreso`, `problema_id`, `resolucion`, `tecnico_id`, `tiempoEstimado`, `tiempoMaximo`, `descripcionProblema`, `indicacionesTecnicas`, `dificultadTecnica`, `estado`) VALUES
 (1, '2023-10-15', 1, '2023-10-25', 1, '2023-10-25', NULL, 'Hace una semana que bla bla bla bla bla', 'Tenes que...', 'INTERMEDIO', 'RESUELTO'),
 (2, '2023-10-20', 2, '2023-10-30', 2, '2023-10-30', NULL, 'Hola mi problema es que bla bla bla bla bla', 'Primero ...', 'INTERMEDIO', 'RESUELTO'),
-(3, '2023-10-25', 3, '2023-11-05', 3, '2023-11-05', NULL, 'Me gustaria saber por que bla bla bla bla bla', 'Lo que tenes que hacer es...', 'INTERMEDIO', 'RESUELTO');
+(3, '2023-10-25', 3, '2023-11-05', 3, '2023-11-05', NULL, 'Me gustaria saber por que bla bla bla bla bla', 'Lo que tenes que hacer es...', 'INTERMEDIO', 'RESUELTO'),
+(52, '2023-11-01', 3, '2023-11-12', 1, '2023-11-10', '2023-11-13', 'Me gustaria saber por que bla bla bla bla bla', 'Tenes que...', 'COMPLEJO', 'RESUELTO'),
+(53, '2023-11-07', 2, '2023-11-10', 2, '2023-11-10', NULL, 'Me gustaria saber por que bla bla bla bla bla', 'Primero ...', 'INTERMEDIO', 'RESUELTO'),
+(54, '2023-11-13', 1, '2023-11-14', 1, '2023-11-14', NULL, 'Me gustaria saber por que bla bla bla bla bla', 'Lo que tenes que hacer es...', 'INTERMEDIO', 'RESUELTO'),
+(102, '2023-11-01', 3, NULL, 2, '2023-11-11', '2023-11-14', 'Me gustaria saber por que bla bla bla bla bla', 'Lo que tenes que hacer es...', 'COMPLEJO', 'ASIGNADO'),
+(103, '2023-11-15', 3, '2023-11-18', 2, '2023-11-17', '2023-11-20', 'Me gustaria saber por que bla bla bla bla bla', 'Lo que tenes que hacer es...', 'COMPLEJO', 'RESUELTO'),
+(104, '2023-11-19', 2, '2023-11-21', 2, '2023-11-21', NULL, 'Hola mi problema es que bla bla bla bla bla', 'Primero ...', 'INTERMEDIO', 'RESUELTO'),
+(105, '2023-11-23', 2, NULL, 2, '2023-11-25', NULL, 'Hola mi problema es que bla bla bla bla bla', 'Primero ...', 'INTERMEDIO', 'EN_PROGRESO');
 
 -- --------------------------------------------------------
 
@@ -211,7 +218,7 @@ CREATE TABLE `incidente_seq` (
 --
 
 INSERT INTO `incidente_seq` (`next_not_cached_value`, `minimum_value`, `maximum_value`, `start_value`, `increment`, `cache_size`, `cycle_option`, `cycle_count`) VALUES
-(101, 1, 9223372036854775806, 1, 50, 0, 0, 0);
+(201, 1, 9223372036854775806, 1, 50, 0, 0, 0);
 
 -- --------------------------------------------------------
 

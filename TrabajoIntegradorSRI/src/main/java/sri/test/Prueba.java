@@ -171,8 +171,8 @@ public class Prueba {
 //        System.out.println(tecnicoRI.getTecnicosDeIncidentesResueltosMasRapido());
 //        System.out.println(tecnicoRI.getTecnicosDeIncidentesResueltosMasRapidoEnLosUltimosNDias(200));
 //        System.out.println(tecnicoRI.getTecnicosDeIncidentesResueltosMasRapidoEnLosUltimosNDiasV2(10));
-        System.out.println(tecnicoRI.getTecnicosDeUnaDeterminadaEspecialidadConIncidentesResueltosMasRapidoEnLosUltimosNDias(
-                NombreEspecialidad.SIP, 200));
+//        System.out.println(tecnicoRI.getTecnicosDeUnaDeterminadaEspecialidadConIncidentesResueltosMasRapidoEnLosUltimosNDias(
+//                NombreEspecialidad.SIP, 200));
 //        System.out.println(tecnicoRI.getTecnicosConPromedioDeIncidentesResueltosMasRapido());
 //        System.out.println(tecnicoRI.getTecnicosConPromedioDeIncidentesResueltosMasRapidoEnLosUltimosNDias(17));
 //        System.out.println(tecnicoRI.getTecnicosDeUnaDeterminadaEspecialidadConPromedioDeIncidentesResueltosMasRapidoEnLosUltimosNDias(
